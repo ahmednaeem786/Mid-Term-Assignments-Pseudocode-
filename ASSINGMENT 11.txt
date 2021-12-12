@@ -1,0 +1,23 @@
+//ASSIGNMENT 11
+
+DECLARE str1 : STRING
+DECLARE notstr, badstr : STRING
+DECLARE notposition, badposition : INTEGER
+
+
+str1 ← ""
+notstr ← "not"
+badstr ← "bad"
+notposition ← 0
+badposition ← 0
+
+INPUT "Please enter string to be processed; ", str1
+
+notposition ← Locate(str1, notstr)
+badposition ← Locate(str1, badstr)
+
+IF badposition > notposition THEN
+    OUTPUT "Processed STRING Is: " + LEFT(str1, notposition - 1) + "good" + MID(str1, badposition + 3, Len(str1)))
+ENDIF
+
+

@@ -1,0 +1,37 @@
+//ASSINGMENT 7
+
+DECLARE i : INTEGER
+DECLARE str1 : STRING
+DECLARE str2 : STRING
+DECLARE char1 : CHAR
+DECLARE char2 : CHAR
+DECLARE char3 : CHAR
+DECLARE char4 : CHAR
+
+
+i ← 0
+str1 ← ""
+str2 ← ""
+char1 ← ''
+char2 ← ''
+char3 ← ''
+char4 ← ''
+
+
+INPUT "Please Input a string which has >2 words: ", str1 
+
+
+IF LEN(str1) > 2 THEN
+    char1 ← MID(str1, 1, 1)
+    char2 ← MID(str1, 2, 1)
+
+    char3 ← RIGHT(str1, 2)
+    char4 ← RIGHT(str1, 1)
+
+
+    OUTPUT char1, char2, char3, char4
+ELSE
+
+    OUTPUT str1 
+
+ENDIF

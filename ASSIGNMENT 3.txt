@@ -1,0 +1,56 @@
+//ASSINGMENT 3
+
+
+DECLARE str1 : STRING
+DECLARE i : INTEGER
+DECLARE char1 : CHAR
+DECLARE char2 : CHAR
+DECLARE char3 : CHAR
+DECLARE digitcount : INTEGER
+DECLARE alphacount : INTEGER
+DECLARE specialcount : INTEGER
+DECLARE characterposition : INTEGER
+
+
+str1 ← ""
+i ← 0
+char1 ← ''
+char2 ← ''
+char3 ← ''
+digitcount ← 0
+alphacount ← 0
+specialcount ← 0
+
+
+INPUT "Please Enter STRING which is to be processed: ", str1
+
+
+INPUT "Please Enter character which needs to be counted: ", char1
+
+str1 ← UPPER(str1)
+char1 ← UPPER(char1)
+
+FOR i ← 1 TO LEN(str1)
+    char3 ← MID(str1, i, 1)
+    IF char3 ← char1 THEN
+characterposition ← characterposition + 1
+    ENDIF
+
+NEXT i
+
+For i ← 1 TO LEN(str1)
+    char2 ← MID(str1, i, 1)
+    IF char2 >= "A" AND char2 <= "Z" THEN
+alphacount ← alphacount + 1
+    ELSEIF char2 >= "0" AND char2 <= "9" THEN
+digitcount ← digitcount + 1
+    ELSE  specialcount ← specialcount + 1
+    ENDIF
+
+NEXT i
+
+OUTPUT "Number Of Alphabets Are: ", alphacount
+OUTPUT "Number Of Digits Are: ", digitcount
+OUTPUT "Number Of special characters Are: ", specialcount
+OUTPUT "Number Of Times your enter character occured was : ", characterposition
+

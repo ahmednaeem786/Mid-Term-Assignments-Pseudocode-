@@ -1,0 +1,33 @@
+//String Manipulation Assingment 1
+
+//DECLARATIONS
+DECLARE inpstr, str1 : STRING
+DECLARE count : INTEGER
+DECLARE cmpchar : CHAR
+DECLARE notfound : BOOLEAN
+DECLARE charcounter : INTEGER
+DECLARE i : INTEGER
+
+//INITIALIZATION
+
+inpstr ← ""
+str1 ← "abcdefghijklmnopqrstuvwxyz"
+count ← 0
+notfound ← FALSE
+charcounter ← 0
+
+INPUT "Enter The String: ", inpstr
+
+FOR count ← 1 TO LEN(inpstr)
+  cmpchar ← MID(inpstr, count, 1)
+  i ← InStr(str1, LOWER(cmpchar))
+   IF i > 0 THEN
+    charcounter ← charcounter + 1
+   ENDIF
+NEXT count
+
+IF charcounter >= LEN(str1) THEN
+   OUTPUT "Does contain all alphabets" 
+ELSE
+   OUTPUT "Does NOT contain all alphabets" 
+ENDIF

@@ -1,0 +1,14 @@
+//ASSINGMENT 6
+
+DECLARE numberofdonuts : Integer
+
+numberofdonuts ← 0
+
+INPUT "How many donuts do you require?: ", numberofdonuts
+
+IF numberofdonuts => 10 THEN
+    OUTPUT "Number Of Donuts are many"
+ELSE
+    OUTPUT "Number of donuts: ", numberofdonuts
+
+ENDIF

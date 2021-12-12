@@ -1,0 +1,34 @@
+//Assingment 2
+
+DECLARE str1 : STRING
+DECLARE str2 : STRING
+DECLARE char1 : CHAR
+DECLARE char2 : CHAR
+DECLARE char3 : CHAR
+DECLARE i : INTEGER
+
+str1 ← ""
+str2 ← ""
+char1 ← ''
+char2 ← ''
+char3 ← ''
+i ← 0
+
+INPUT "Please Enter STRING To Process: ", str1 
+
+INPUT "Please enter the character you need to replace: ", char1 
+
+INPUT "Please enter the character which WILL replace: ", char2 
+
+FOR i ← 1 To LEN(str1)
+    char3 ← MID(str1, i, 1)
+      IF char1 <> char3 THEN
+            str2 ← str2 + char3
+         Else
+            str2 ← str2 + char2
+      ENDIF
+NEXT i
+
+OUTPUT "Processed STRING is ", str2 
+
+

@@ -1,0 +1,31 @@
+//ASSINGMENT 10
+
+DECLARE str1 : STRING
+DECLARE str2 : STRING
+DECLARE ing : STRING
+DECLARE ly : STRING
+DECLARE position : INTEGER
+
+position ← 0
+str1 ← ""
+ing ← "ing"
+ly ← "ly"
+
+INPUT "Please Enter STRING To Process: ", str1
+
+str1 ← LOWER(str1)
+
+IF LEN(str1) >= 3 THEN
+    IF RIGHT(str1, 3) <> ing THEN
+OUTPUT str1 + ing
+    ELSEIF RIGHT(str1, 3) = ing THEN
+    position ← Locate(str1, ing)
+    str2 ← LEFT(str1, position - 1)
+    OUTPUT str2 + ly
+
+    ENDIF
+
+ELSE OUTPUT str1 
+
+ENDIF
+

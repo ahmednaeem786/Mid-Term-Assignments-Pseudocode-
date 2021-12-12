@@ -1,0 +1,21 @@
+//ASSIGNMENT 9
+
+DECLARE str1, str2, str11, str22 : STRING
+DECLARE i : INTEGER
+
+str1 ← ""
+str2 ← ""
+str11 ← ""
+str22 ← ""
+i ← 0
+
+INPUT "Please Enter String 1: ", str1
+
+
+INPUT "Please Enter String 2: ", str2
+
+str11 ← LEFT(str1, 2)
+str22 ← LEFT(str2, 2)
+
+
+OUTPUT str22 + MID(str1, 3, LEN(str1)) + " " + str11 + MID(str2, 3, LEN(str2)))
